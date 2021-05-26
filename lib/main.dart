@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'animation/OpacityChangePage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -8,12 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: OpacityChangePage()
+        // home: MyHomePage(title: 'Flutter Demo Home Page'),
+        );
   }
 }
 
