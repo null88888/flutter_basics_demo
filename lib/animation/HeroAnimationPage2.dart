@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class HeroAnimationPage2 extends StatelessWidget {
-  final String image;
+  final String? image;
 
   const HeroAnimationPage2({@required this.image});
 
@@ -19,11 +19,11 @@ class HeroAnimationPage2 extends StatelessWidget {
               collapseMode: CollapseMode.parallax,
               background: Hero(
                 // 使用从页面 1 传入的 tag 值
-                tag: image,
+                tag: image!,
                 child: Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(image),
+                      image: AssetImage(image!),
                       fit: BoxFit.cover,
                     ),
                   ),

@@ -8,9 +8,6 @@ import 'package:flutter/material.dart';
 
   除了 RotationTransition 外，还有其他的显示动画部件如：FadeTransition, ScaleTransition,
                                                  SizeTransition, SlideTransition 等。
-
-
-
  */
 
 class RotationAinmationPage extends StatefulWidget {
@@ -19,8 +16,8 @@ class RotationAinmationPage extends StatefulWidget {
 }
 
 class _RotationAinmationPageState extends State<RotationAinmationPage> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _turns;
+  late AnimationController _controller;
+  late Animation<double> _turns;
   bool _playing = false;
 
   // 控制动画运行状态
