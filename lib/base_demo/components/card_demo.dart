@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics_demo/base_demo/http/fade_in_image_without_auth.dart';
 import '../../model/post.dart';
 
 class CardDemo extends StatefulWidget {
@@ -37,11 +36,9 @@ class _CardDemoState extends State<CardDemo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: FadeInImageWithoutAuth.assetNetwork(
-                          image: post.imageUrl.toString(),
-                          placeholder: '',
-                        ) as ImageProvider, //    NetworkImage(post.imageUrl),
-                      ),
+                          backgroundImage: NetworkImage(
+                              'http://img8.zol.com.cn/bbs/upload/23765/23764201.jpg') //NetworkImage(post.imageUrl),
+                          ),
                       title: Text(post.title),
                       subtitle: Text(post.author),
                     ),

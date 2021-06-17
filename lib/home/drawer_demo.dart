@@ -9,15 +9,17 @@ class DrawerDemo extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text('wanghao', style: TextStyle(fontWeight: FontWeight.bold)),
-            accountEmail: Text('wanghao@ninghao.net'),
+            accountName: Text('侧滑', style: TextStyle(fontWeight: FontWeight.bold)),
+            accountEmail: Text('侧滑email'),
             currentAccountPicture: CircleAvatar(
-              backgroundImage: NetworkImage('https://resources.ninghao.org/images/wanghao.jpg'),
+              backgroundImage: NetworkImage(
+                  'https://lh3.googleusercontent.com/motpsiWs081zOJH_eGr22wBvUVJxWaBkrr80-ItGvynlTlxZwqmsBAKVXDVyr9dnNCnnDRvwxumTUPhHfsojYHFOHA=w640-h400-e365-rj-sc0x00ffffff'),
             ),
             decoration: BoxDecoration(
               color: Colors.yellow[400],
               image: DecorationImage(
-                image: NetworkImage('https://resources.ninghao.org/images/childhood-in-a-picture.jpg'),
+                image: NetworkImage(
+                    'https://lh3.googleusercontent.com/motpsiWs081zOJH_eGr22wBvUVJxWaBkrr80-ItGvynlTlxZwqmsBAKVXDVyr9dnNCnnDRvwxumTUPhHfsojYHFOHA=w640-h400-e365-rj-sc0x00ffffff'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(Colors.yellow[400]!.withOpacity(0.6), BlendMode.hardLight),
               ),

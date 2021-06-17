@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics_demo/base_demo/components/material_components.dart';
 import 'package:flutter_basics_demo/base_demo/list/alllistdemo.dart';
 import 'package:flutter_basics_demo/home/home.dart';
+import 'package:flutter_basics_demo/plugins/plugins_page.dart';
 
 class BottomNavigationBarDemo extends StatefulWidget {
   @override
@@ -32,6 +33,7 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
         child: PageView(physics: NeverScrollableScrollPhysics(), controller: _controller, children: <Widget>[
           Home(),
           MaterialComponents(),
+          PluginsPage(),
           AllListDemoPage(),
         ]),
       ),
@@ -48,6 +50,10 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_input_component),
             title: Text('components'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz),
+            title: Text('plugins'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),

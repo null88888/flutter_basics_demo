@@ -70,6 +70,7 @@ Future<void> notificationMain() async {
       requestAlertPermission: false, requestBadgePermission: false, requestSoundPermission: false);
   final InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid, iOS: initializationSettingsIOS, macOS: initializationSettingsMacOS);
+
   await flutterLocalNotificationsPlugin.initialize(initializationSettings,
       onSelectNotification: (String? payload) async {
     if (payload != null) {
@@ -78,6 +79,7 @@ Future<void> notificationMain() async {
     selectedNotificationPayload = payload;
     selectNotificationSubject.add(payload);
   });
+
   runApp(
     MaterialApp(
       initialRoute: initialRoute,

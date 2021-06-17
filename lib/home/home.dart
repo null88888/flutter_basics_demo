@@ -5,7 +5,6 @@ import 'layout_demo.dart';
 import 'drawer_demo.dart';
 import 'sliver_demo.dart';
 
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class Home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          title: Text('NINGHAO'),
+          title: Text('测试'),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),

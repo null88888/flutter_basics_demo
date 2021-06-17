@@ -14,7 +14,7 @@ class SliverDemo extends StatelessWidget {
             expandedHeight: 178.0,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
-                'Ninghao Flutter'.toUpperCase(),
+                ' Flutter'.toUpperCase(),
                 style: TextStyle(
                   fontSize: 15.0,
                   letterSpacing: 3.0,
@@ -28,10 +28,7 @@ class SliverDemo extends StatelessWidget {
             ),
           ),
           SliverSafeArea(
-            sliver: SliverPadding(
-              padding: EdgeInsets.all(8.0), 
-              sliver: SliverGridDemo()
-            ),
+            sliver: SliverPadding(padding: EdgeInsets.all(8.0), sliver: SliverGridDemo()),
           ),
         ],
       ),
@@ -54,7 +51,7 @@ class SliverListDemo extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   AspectRatio(
-                    aspectRatio: 16/9,
+                    aspectRatio: 16 / 9,
                     child: Image.network(
                       posts[index].imageUrl,
                       fit: BoxFit.cover,
@@ -68,17 +65,11 @@ class SliverListDemo extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           posts[index].title,
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                          ),
+                          style: TextStyle(fontSize: 20.0, color: Colors.white),
                         ),
                         Text(
                           posts[index].author,
-                          style: TextStyle(
-                            fontSize: 13.0,
-                            color: Colors.white
-                          ),
+                          style: TextStyle(fontSize: 13.0, color: Colors.white),
                         ),
                       ],
                     ),

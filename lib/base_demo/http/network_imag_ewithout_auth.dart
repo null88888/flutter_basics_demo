@@ -37,14 +37,14 @@ class NetworkImageWithoutAuth extends ImageProvider<NetworkImageWithoutAuth> {
   // ImageStreamCompleter load(T key, DecoderCallback decode);
 
   // @override
-  // Future<ImageStreamCompleter> load(NetworkImageWithoutAuth key,DecoderCallback decode) async {
+  // Future<ImageStreamCompleter> load(NetworkImageWithoutAuth key, DecoderCallback decode) async {
   //   return MultiFrameImageStreamCompleter(
   //       codec: _loadAsync(key),
   //       scale: key.scale,
   //       informationCollector: (StringBuffer information) {
   //         information.writeln('Image provider: $this');
   //         information.write('Image key: $key');
-  //       } as InformationCollector );
+  //       } as InformationCollector);
   // }
 
   @override
