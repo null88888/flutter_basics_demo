@@ -65,7 +65,7 @@ class _RotationAinmationPageState extends State<RotationAinmationPage> with Sing
             width: 200,
             height: 200,
             child: Image.asset(
-              'assets/images/fan.png',
+              'assets/fan.png',
               fit: BoxFit.cover,
             ),
           ),
