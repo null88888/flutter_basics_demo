@@ -42,62 +42,61 @@ class _DemoState extends State<AnimatedTextKitDemo> {
             ],
           ),
           ListTile(title: Text("打字机")),
-          TyperAnimatedTextKit(
-              onTap: () {
-                print("Tap Event");
-              },
-              text: [
-                "学习使我快乐",
-                "切图仔最后的倔强",
-              ],
-              textStyle: TextStyle(fontSize: 30.0, fontFamily: "Bobbers"),
-              textAlign: TextAlign.start,
-              alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-              ),
+          AnimatedTextKit(
+            animatedTexts: [
+              TyperAnimatedText('学习使我快乐,'),
+              TyperAnimatedText('切图仔最后的倔强,'),
+              TyperAnimatedText('and then do your best'),
+              TyperAnimatedText('- W.Edwards Deming'),
+            ],
+            onTap: () {
+              print("Tap Event");
+            },
+          ),
           ListTile(title: Text("打字机 带光标")),
           TypewriterAnimatedTextKit(
-              onTap: () {
-                print("Tap Event");
-              },
-              text: [
-                "切图仔最后的倔强",
-              ],
-              textStyle: TextStyle(fontSize: 30.0, fontFamily: "Agne"),
-              textAlign: TextAlign.start,
-              alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-              ),
+            onTap: () {
+              print("Tap Event");
+            },
+            text: [
+              "切图仔最后的倔强",
+            ],
+            textStyle: TextStyle(fontSize: 30.0, fontFamily: "Agne"),
+            textAlign: TextAlign.start,
+            //  alignment: AlignmentDirectional.topStart // or Alignment.topLeft
+          ),
           ListTile(title: Text("缩放")),
           SizedBox(
             width: 250.0,
             child: ScaleAnimatedTextKit(
-                onTap: () {
-                  print("Tap Event");
-                },
-                text: ["Flutter", "轮子", "推荐"],
-                textStyle: TextStyle(fontSize: 70.0, fontFamily: "Canterbury"),
-                textAlign: TextAlign.start,
-                alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-                ),
-          ),
-          ListTile(title: Text("颜色渐变")),
-          ColorizeAnimatedTextKit(
               onTap: () {
                 print("Tap Event");
               },
-              text: [
-                "小包子",
-                "flutter",
-              ],
-              textStyle: TextStyle(fontSize: 32.0, fontFamily: "Horizon"),
-              colors: [
-                Colors.purple,
-                Colors.blue,
-                Colors.yellow,
-                Colors.red,
-              ],
+              text: ["Flutter", "轮子", "推荐"],
+              textStyle: TextStyle(fontSize: 70.0, fontFamily: "Canterbury"),
               textAlign: TextAlign.start,
-              alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-              )
+              //  alignment: AlignmentDirectional.topStart // or Alignment.topLeft
+            ),
+          ),
+          ListTile(title: Text("颜色渐变")),
+          ColorizeAnimatedTextKit(
+            onTap: () {
+              print("Tap Event");
+            },
+            text: [
+              "小包子",
+              "flutter",
+            ],
+            textStyle: TextStyle(fontSize: 32.0, fontFamily: "Horizon"),
+            colors: [
+              Colors.purple,
+              Colors.blue,
+              Colors.yellow,
+              Colors.red,
+            ],
+            textAlign: TextAlign.start,
+            //   alignment: AlignmentDirectional.topStart // or Alignment.topLeft
+          )
         ],
       ),
     );

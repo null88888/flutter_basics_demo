@@ -157,7 +157,7 @@ class ListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Slidable.of(context).close();
+        Slidable.of(context)!.close();
       },
       child: Container(
         color: Colors.white,

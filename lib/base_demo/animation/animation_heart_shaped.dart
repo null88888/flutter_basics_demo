@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AnimationDemo extends StatelessWidget {
+class AnimationHeartShaped extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,16 +8,16 @@ class AnimationDemo extends StatelessWidget {
           title: Text('AnimationDemo'),
           elevation: 0.0,
         ),
-        body: AnimationDemoHome());
+        body: AnimationHeartShapedPage());
   }
 }
 
-class AnimationDemoHome extends StatefulWidget {
+class AnimationHeartShapedPage extends StatefulWidget {
   @override
-  _AnimationDemoHomeState createState() => _AnimationDemoHomeState();
+  _AnimationHeartShapedPageState createState() => _AnimationHeartShapedPageState();
 }
 
-class _AnimationDemoHomeState extends State<AnimationDemoHome> with TickerProviderStateMixin {
+class _AnimationHeartShapedPageState extends State<AnimationHeartShapedPage> with TickerProviderStateMixin {
   late AnimationController animationDemoController;
   late Animation animation;
   late Animation animationColor;

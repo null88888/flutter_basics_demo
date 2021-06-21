@@ -1,10 +1,11 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter_basics_demo/utils/common.dart';
 
 class FlutterSpeedDialDemo extends StatefulWidget {
-  FlutterSpeedDialDemo({Key? key}) : super(key: key);
+  FlutterSpeedDialDemo({Key key}) : super(key: key);
 
   @override
   _demoState createState() => _demoState();
@@ -39,7 +40,7 @@ class _demoState extends State<FlutterSpeedDialDemo> {
       // 	children:childButtons
       // ),
       floatingActionButton: SpeedDial(
-        marginRight: 25, //右边距
+        marginEnd: 25, //右边距
         marginBottom: 50, //下边距
         animatedIcon: AnimatedIcons.menu_close, //带动画的按钮
         animatedIconTheme: IconThemeData(size: 22.0),

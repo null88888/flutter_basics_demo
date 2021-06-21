@@ -1,9 +1,10 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_basics_demo/utils/common.dart';
 
 class FlutterSwiperDemo extends StatefulWidget {
-  FlutterSwiperDemo({Key? key}) : super(key: key);
+  FlutterSwiperDemo({Key key}) : super(key: key);
 
   @override
   _DefaultPageState createState() => _DefaultPageState();

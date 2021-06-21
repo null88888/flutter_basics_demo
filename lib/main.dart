@@ -1,14 +1,9 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_basics_demo/base_demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_basics_demo/base_demo/i18n/intl/base_demo_localizations.dart';
-import 'package:flutter_basics_demo/notification/local_notification.dart';
-import 'package:flutter_basics_demo/notification/user_defind_notification.dart';
-import 'package:flutter_basics_demo/web_socket/web_socket_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'animation/LogoApp.dart';
-import 'share/share_system_page.dart';
-import 'ImageGallerySaverDemo.dart';
+import 'package:flutter_basics_demo/router/routes.dart';
 
 void main() {
   //defineNotificationMain();
@@ -43,6 +38,7 @@ class App extends StatelessWidget {
           Locale('en', 'US'),
           Locale('zh', 'CN'),
         ],
+        routes: routes,
         debugShowCheckedModeBanner: false,
         home: BottomNavigationBarDemo(),
         theme: ThemeData(

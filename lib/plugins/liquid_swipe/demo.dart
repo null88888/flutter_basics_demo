@@ -1,10 +1,11 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 //import 'package:liquid_swipe/Constants/Helpers.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:flutter_basics_demo/utils/common.dart';
 
 class LiquidSwipeDemo extends StatefulWidget {
-  LiquidSwipeDemo({Key? key}) : super(key: key);
+  LiquidSwipeDemo({Key key}) : super(key: key);
 
   @override
   _demoState createState() => _demoState();
@@ -57,7 +58,6 @@ class _demoState extends State<LiquidSwipeDemo> {
               )),
         ],
         fullTransitionValue: 200,
-        enableSlideIcon: true,
         enableLoop: true,
         positionSlideIcon: 0.5,
         waveType: currentAnimate,

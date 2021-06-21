@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hidden_drawer_menu/hidden_drawer/hidden_drawer_menu.dart';
+import 'package:hidden_drawer_menu/controllers/simple_hidden_drawer_controller.dart';
+import 'package:hidden_drawer_menu/simple_hidden_drawer/provider/simple_hidden_drawer_provider.dart';
+import 'package:hidden_drawer_menu/simple_hidden_drawer/simple_hidden_drawer.dart';
 import 'package:flutter_basics_demo/utils/common.dart';
 
 class HiddenDrawerMenuDemo extends StatefulWidget {
@@ -61,13 +63,13 @@ class _MenuState extends State<Menu> {
           FlatButton(
             child: Text("菜单一", style: TextStyle(color: Colors.white, fontSize: 20)),
             onPressed: () {
-              SimpleHiddenDrawerProvider.of(context).setSelectedMenuPosition(0);
+              SimpleHiddenDrawerController.of(context).setSelectedMenuPosition(0);
             },
           ),
           FlatButton(
             child: Text("菜单二", style: TextStyle(color: Colors.white, fontSize: 20)),
             onPressed: () {
-              SimpleHiddenDrawerProvider.of(context).setSelectedMenuPosition(1);
+              SimpleHiddenDrawerController.of(context).setSelectedMenuPosition(1);
             },
           )
         ],

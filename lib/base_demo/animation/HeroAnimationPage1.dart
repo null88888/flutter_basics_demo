@@ -1,6 +1,6 @@
 // 页面 1
 import 'package:flutter/material.dart';
-import 'HeroAnimationPage2.dart';
+import '../animation/HeroAnimationPage2.dart';
 
 String cake1 = 'assets/images/cake01.jpg';
 String cake2 = 'assets/images/cake02.jpg';

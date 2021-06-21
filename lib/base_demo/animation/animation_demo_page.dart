@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics_demo/base_demo/animation/animation_demo_page.dart';
+import 'package:flutter_basics_demo/base_demo/animation/HeroAnimationPage1.dart';
+import 'package:flutter_basics_demo/base_demo/animation/LogoApp1.dart';
+import 'package:flutter_basics_demo/base_demo/animation/OpacityChangePage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/RotationAinmationPage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/StaggeredAnimationPage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/ThrowAnimationPage.dart';
 import 'package:flutter_basics_demo/base_demo/animation/animation_heart_shaped.dart';
 import 'package:flutter_basics_demo/base_demo/bloc/bloc_demo.dart';
 import 'package:flutter_basics_demo/base_demo/http/http_demo.dart';
@@ -9,12 +14,12 @@ import 'package:flutter_basics_demo/base_demo/state/state_management_demo.dart';
 import 'package:flutter_basics_demo/base_demo/stream/stream_demo.dart';
 import 'package:flutter_basics_demo/base_demo/test/test_demo.dart';
 
-class AllListDemoPage extends StatefulWidget {
+class AnimationDemoPage extends StatefulWidget {
   @override
-  _AllListDemoState createState() => _AllListDemoState();
+  _AnimationDemoPageState createState() => _AnimationDemoPageState();
 }
 
-class _AllListDemoState extends State<AllListDemoPage> {
+class _AnimationDemoPageState extends State<AnimationDemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,21 +30,19 @@ class _AllListDemoState extends State<AllListDemoPage> {
         slivers: <Widget>[
           _dividerTopLine(),
           _divider(10),
-          _personItem('AnimationDemo', 1),
+          _personItem('Hero 动画', 1),
           _dividerLine(),
-          _personItem('bloc', 2),
+          _personItem('交织动画', 2),
           _dividerLine(),
-          _personItem('http', 3),
+          _personItem('物理动画', 3),
           _dividerLine(),
-          _personItem('i18n', 4),
+          _personItem('显式动画', 4),
           _dividerLine(),
-          _personItem('rxdart', 5),
+          _personItem('隐式动画', 5),
           _dividerLine(),
-          _personItem('state', 6),
+          _personItem('例子1', 6),
           _dividerLine(),
-          _personItem('stream', 7),
-          _dividerLine(),
-          _personItem('test', 8),
+          _personItem('例子2', 7),
           _dividerLine(),
           _divider(30),
         ],
@@ -97,7 +100,7 @@ class _AllListDemoState extends State<AllListDemoPage> {
               alignment: Alignment.center,
               children: <Widget>[
                 Text(
-                  "蓝普",
+                  "动画demo",
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ],
@@ -130,35 +133,31 @@ class _AllListDemoState extends State<AllListDemoPage> {
   void pressIndexPage(int pressIndex) {
     if (pressIndex == 1) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return AnimationDemoPage();
+        return HeroAnimationPage1();
       }));
     } else if (pressIndex == 2) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return BlocDemo();
+        return StaggeredAnimationPage();
       }));
     } else if (pressIndex == 3) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return HttpDemo();
+        return ThrowAnimationPage();
       }));
     } else if (pressIndex == 4) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return I18nDemo();
+        return RotationAinmationPage();
       }));
     } else if (pressIndex == 5) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return RxDartDemo();
+        return OpacityChangePage();
       }));
     } else if (pressIndex == 6) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return StateManagementDemo();
+        return AnimationHeartShaped();
       }));
     } else if (pressIndex == 7) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return StreamDemo();
-      }));
-    } else if (pressIndex == 8) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return TestDemo();
+        return LogoApp1();
       }));
     }
   }

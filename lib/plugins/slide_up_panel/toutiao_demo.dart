@@ -1,8 +1,9 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class ToutiaoDemo extends StatefulWidget {
-  ToutiaoDemo({Key? key}) : super(key: key);
+  ToutiaoDemo({Key key}) : super(key: key);
 
   @override
   _ToutiaoDemoState createState() => _ToutiaoDemoState();
@@ -46,7 +47,7 @@ class _ToutiaoDemoState extends State<ToutiaoDemo> {
               print("向上" + offsetY.toString());
               double position = offsetY.abs() / 300;
               position = position > 1 ? 1 : position;
-              panel.setPanelPosition(position);
+              panel.animatePanelToPosition(position);
               if (position > 0.4) {
                 panel.open();
               }
