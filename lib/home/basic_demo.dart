@@ -14,7 +14,8 @@ class ContainerBoxDecorationDemo extends StatelessWidget {
       // color: Colors.grey[100],
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage('https://resources.ninghao.org/images/say-hello-to-barry.jpg'),
+          image: NetworkImage(
+              'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201409%2F08%2F20140908130732_kVXzh.jpeg&refer=http%3A%2F%2Fcdn.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626941302&t=8f31f452cc732cc61adb857f8ac709ca'),
           alignment: Alignment.topCenter,
           // repeat: ImageRepeat.repeatY,
           fit: BoxFit.cover,

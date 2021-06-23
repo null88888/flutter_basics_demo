@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics_demo/base_demo/animation/animation_demo_page.dart';
+import 'package:flutter_basics_demo/base_demo/animation/HeroAnimationPage1.dart';
+import 'package:flutter_basics_demo/base_demo/animation/LogoApp1.dart';
+import 'package:flutter_basics_demo/base_demo/animation/OpacityChangePage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/RotationAinmationPage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/StaggeredAnimationPage.dart';
+import 'package:flutter_basics_demo/base_demo/animation/ThrowAnimationPage.dart';
 import 'package:flutter_basics_demo/base_demo/animation/animation_heart_shaped.dart';
 import 'package:flutter_basics_demo/base_demo/bloc/bloc_demo.dart';
 import 'package:flutter_basics_demo/base_demo/http/http_demo.dart';
 import 'package:flutter_basics_demo/base_demo/i18n/i18n_demo.dart';
-import 'package:flutter_basics_demo/base_demo/redux/redux_demo.dart';
 import 'package:flutter_basics_demo/base_demo/rxdart/rxdart_demo.dart';
 import 'package:flutter_basics_demo/base_demo/state/state_management_demo.dart';
 import 'package:flutter_basics_demo/base_demo/stream/stream_demo.dart';
 import 'package:flutter_basics_demo/base_demo/test/test_demo.dart';
 
-class AllListDemoPage extends StatefulWidget {
+class ArithmeticStudyPage extends StatefulWidget {
   @override
-  _AllListDemoState createState() => _AllListDemoState();
+  _ArithmeticStudyPageState createState() => _ArithmeticStudyPageState();
 }
 
-class _AllListDemoState extends State<AllListDemoPage> {
+class _ArithmeticStudyPageState extends State<ArithmeticStudyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,23 +30,29 @@ class _AllListDemoState extends State<AllListDemoPage> {
         slivers: <Widget>[
           _dividerTopLine(),
           _divider(10),
-          _personItem('AnimationDemo', 1),
+          _personItem('两数之和', 1),
           _dividerLine(),
-          _personItem('bloc', 2),
+          _personItem('无重复字符的最长子串', 2),
           _dividerLine(),
-          _personItem('http', 3),
+          _personItem('无重复字符的最长子串(2)', 3),
           _dividerLine(),
-          _personItem('i18n', 4),
+          _personItem('无重复字符的最长子串(3)', 4),
           _dividerLine(),
-          _personItem('rxdart', 5),
+          _personItem('最大回文子串', 5),
           _dividerLine(),
-          _personItem('state', 6),
+          _personItem('最大回文子串', 6),
           _dividerLine(),
-          _personItem('stream', 7),
+          _personItem('反转整数', 7),
           _dividerLine(),
-          _personItem('test', 8),
+          _personItem('删除排序数组中的重复项', 8),
           _dividerLine(),
-          _personItem('redux', 9),
+          _personItem('三维形体投影面积', 9),
+          _dividerLine(),
+          _personItem('最长的斐波那契子序列的长度(暴力法)', 10),
+          _dividerLine(),
+          _personItem('最长的斐波那契子序列的长度(动态规划法)', 11),
+          _dividerLine(),
+          _personItem('环形链表(哈希表法)', 12),
           _dividerLine(),
           _divider(30),
         ],
@@ -100,7 +110,7 @@ class _AllListDemoState extends State<AllListDemoPage> {
               alignment: Alignment.center,
               children: <Widget>[
                 Text(
-                  "蓝普",
+                  "动画demo",
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ],
@@ -109,46 +119,6 @@ class _AllListDemoState extends State<AllListDemoPage> {
         ],
       ),
     );
-  }
-
-  void pressIndexPage(int pressIndex) {
-    if (pressIndex == 1) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return AnimationDemoPage();
-      }));
-    } else if (pressIndex == 2) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return BlocDemo();
-      }));
-    } else if (pressIndex == 3) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return HttpDemo();
-      }));
-    } else if (pressIndex == 4) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return I18nDemo();
-      }));
-    } else if (pressIndex == 5) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return RxDartDemo();
-      }));
-    } else if (pressIndex == 6) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return StateManagementDemo();
-      }));
-    } else if (pressIndex == 7) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return StreamDemo();
-      }));
-    } else if (pressIndex == 8) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return TestDemo();
-      }));
-    } else if (pressIndex == 9) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return ReduxDemo();
-      }));
-    }
   }
 
   SliverToBoxAdapter _dividerLine() {
@@ -168,5 +138,37 @@ class _AllListDemoState extends State<AllListDemoPage> {
         color: const Color.fromARGB(255, 247, 247, 247),
       ),
     );
+  }
+
+  void pressIndexPage(int pressIndex) {
+    if (pressIndex == 1) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return HeroAnimationPage1();
+      }));
+    } else if (pressIndex == 2) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return StaggeredAnimationPage();
+      }));
+    } else if (pressIndex == 3) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return ThrowAnimationPage();
+      }));
+    } else if (pressIndex == 4) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return RotationAinmationPage();
+      }));
+    } else if (pressIndex == 5) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return OpacityChangePage();
+      }));
+    } else if (pressIndex == 6) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return AnimationHeartShaped();
+      }));
+    } else if (pressIndex == 7) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return LogoApp1();
+      }));
+    }
   }
 }
